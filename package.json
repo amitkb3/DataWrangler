@@ -1,0 +1,22 @@
+{
+  "name": "datawrangler",
+  "version": "1.0.0",
+  "description": "Data Wrangling with Javascript Book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitkb3/DataWrangler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitkb3/DataWrangler/issues"
+  },
+  "homepage": "https://github.com/amitkb3/DataWrangler#readme",
+  "devDependencies": {
+    "eslint": "^5.12.1"
+  }
+}
