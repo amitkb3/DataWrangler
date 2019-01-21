@@ -24,16 +24,42 @@
 //       console.error("An error occured!");
 //     });
 
-const axios = require('axios');
+// const axios = require('axios');
+
+// const url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson";
+
+// axios.get(url)
+//   .then(response => {
+//     console.log(response);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
+
+// Importing data from earthquakes.json
+
+// const importJsonFile = require('../toolkit/importJsonFile.js');
+
+// importJsonFile("./data/earthquakes.json")
+//    .then(data => {
+//      console.log(data);
+//    })
+//    .catch(err => {
+//      console.error("An error occured.");
+//      console.error(err.stack);
+//    });
+
+//Importing earthquakes json data from REST API
+
+const importJsonFromRestApi = require('../toolkit/importJsonFromRestApi.js');
 
 const url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson";
 
-axios.get(url)
-  .then(response => {
-    console.log(response);
+importJsonFromRestApi(url)
+  .then(data => {
+    console.log(data);
   })
   .catch(err => {
-    console.error(err);
+    console.error("An error occured.");
+    console.error(err.stack);
   });
-
-
