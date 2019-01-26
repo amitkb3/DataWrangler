@@ -1,7 +1,7 @@
-const axios = require('axios');
+const request = require('request-promise');
 
 function importJsonFromRestApi (url) {
-  return axios.get(url)
+  return request.get(url)
     .then(response => {
       return JSON.parse(response);
     });
