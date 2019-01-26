@@ -88,5 +88,18 @@
 //     .catch(err => {   
 //         console.error("An error occurred.");    
 //         console.error(err.stack);   
-//     });     
+//     });   
+
+ // Importing data from earthquakes.csv
+
+const importCsvFile = require('../toolkit/importCsvFile');
+
+importCsvFile('./data/earthquakes.csv')
+   .then(data => {
+     console.log(data);
+   })
+   .catch(err => {
+     console.error("An error occured");
+     console.error(err.stack);
+   });
  
