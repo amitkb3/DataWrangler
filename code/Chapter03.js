@@ -92,14 +92,28 @@
 
  // Importing data from earthquakes.csv
 
-const importCsvFile = require('../toolkit/importCsvFile');
+// const importCsvFile = require('../toolkit/importCsvFile');
 
-importCsvFile('./data/earthquakes.csv')
-   .then(data => {
-     console.log(data);
-   })
-   .catch(err => {
-     console.error("An error occured");
-     console.error(err.stack);
-   });
+// importCsvFile('./data/earthquakes.csv')
+//    .then(data => {
+//      console.log(data);
+//    })
+//    .catch(err => {
+//      console.error("An error occured");
+//      console.error(err.stack);
+//    });
  
+   //Listing 3.12 Importing CSV data from a REST API
+
+   const importCsvFromRestApi = require('../toolkit/importCsvFromRestApi.js');
+
+   const url = "https://earthquake.usgs.gov/fdsnws/event/1/query.csv?starttime=2017-01-01&endtime=2017-02-02";
+
+   importCsvFromRestApi(url)
+      .then(data => {
+        console.log(data);
+      })
+      .catch(err => {
+        console.error("error has occured.");
+        console.error(err.stack);
+      });
